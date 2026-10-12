@@ -46,6 +46,9 @@ class RslRlPpoActorCriticCfg:
     dropout: float = 0.0
     """The dropout rate for the first layer of the actor and critic networks."""
 
+    path_query_mode: Literal["learned", "memory"] = "learned"
+    """Actor path query source; select 'memory' for the M1 ablation."""
+
     # Visual inputs
     num_cameras: int = 1
     """Number of depth cameras encoded into the observation (1 or 2)."""

@@ -29,6 +29,7 @@ class AowDNavMDPORunnerCfg(RslRlOnPolicyRunnerCfg):
     reward_shifting_value = 0.05
     policy = RslRlPpoActorCriticCfg(
         class_name="ActorCriticSRU",
+        path_query_mode="memory",
         init_noise_std=1.0,
         actor_hidden_dims=[512, 256, 128],
         critic_hidden_dims=[512, 256, 128],
@@ -82,6 +83,7 @@ class AowDNavPPORunnerCfg(RslRlOnPolicyRunnerCfg):
     empirical_normalization = False
     policy = RslRlPpoActorCriticCfg(
         class_name="ActorCriticSRU",
+        path_query_mode="memory",
         init_noise_std=1.0,
         actor_hidden_dims=[512, 256, 128],
         critic_hidden_dims=[512, 256, 128],
